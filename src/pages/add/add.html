@@ -1,0 +1,180 @@
+<ion-header>
+  <ion-navbar>
+  
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+	<ion-nav #mycontent [root]="rootPage"></ion-nav>
+	
+    <ion-title>
+		<div style="float:left;">Now Loading</div> 
+		<div style="float:right;"><button (click)="itemTapped()"><img src="img/Dec/Checkout.png" style="height:25px;width:25px;"></button></div>
+		<div style="clear: both;"></div>
+	</ion-title>
+	
+	<!------------------------------------------>
+	<!------------------------------------------>
+
+	<!------------------------------------------>
+	
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-color:#022D41;">
+
+	<!------------------------------------------>
+	<!------------------------------------------>
+
+	
+	<!------------------------------------------>
+
+	<!-- ion-card style="padding-left:0px;margin-left:0px;"-->
+	<ion-card style="margin:0px;width:100%;">
+		<ion-slides pager style="padding:0px;margin:0px;background-color:#022D35;">
+		
+			<ion-slide *ngFor="let slide_1 of slides_1" style="padding:0px;">
+			  <!-- ion-toolbar>
+				<ion-buttons end>
+				  <button ion-button color="primary">Skip</button>
+				</ion-buttons>
+			  </ion-toolbar -->
+			  
+			  <img [src]="slide_1.image"/>
+			  <!-- h2 [innerHTML]="slide.title"></h2>
+			  <p [innerHTML]="slide.description"></p -->
+			</ion-slide>
+			
+			<ion-slide style="padding:0px;">
+			  <!-- ion-toolbar>
+			  </ion-toolbar>
+			  <img src="assets/img/ica-slidebox-img-4.png" class="slide-image"/ -->
+			  <!-- h2>See more?</h2 -->
+			  <br/>
+			  <button ion-button large clear icon-right color="primary">
+				See More 
+				<ion-icon name="arrow-round-forward"></ion-icon>
+			  </button>
+			  
+			</ion-slide>
+			
+		</ion-slides>
+	</ion-card>
+	
+	
+	
+	<h3 style="padding-left:10px;padding-top:10px;padding-bottom:5px;color:#DAECF3;">Popular</h3>
+	<!--div style="background-image:url('img/Dec/content_bg.png');background-position: center;background-repeat: no-repeat;">				<!-- Con. HERE : Fix BG -->
+	<ion-card>
+		<!-- img src="img/Pop/araya.jpg" -->
+		<ion-slides pager style="padding:0px;margin:0px;background-color:#022D35;">
+		
+			<ion-slide *ngFor="let slide_2 of slides_2" style="padding:0px;">
+			  
+			  <img [src]="slide_2.image"/>
+			  
+			</ion-slide>
+			
+			<ion-slide style="padding:0px;">
+			  
+			  <br/>
+			  <button ion-button large clear icon-right color="primary">
+				See More 
+				<ion-icon name="arrow-round-forward"></ion-icon>
+			  </button>
+			  
+			</ion-slide>
+			
+		</ion-slides>
+		
+		
+		<ion-item-divider style="height:20px;padding:0px;">
+		<!-- div class="row" style="color:#1AA6B7;text-align:center;width:100%;border-bottom">
+		  <div class="col"> <img src="img/Dec/Crown.png" style="height:20px;width:20px;float:left;padding-left:3px;"><div style="padding-top:2px;"> &emsp; Name </div></div>
+		  <!-- div class="col"><div style="padding-top:2px;"> Price </div></div -->
+		  <!-- div class="col"> <div style="padding-top:2px;float:left;"> Price </div> <img src="img/Dec/Cart.png" style="height:15px;width:20px;float:right;padding-left:3px;"> </div> 
+		</div -->
+		<div class="row" style="color:#1AA6B7;text-align:center;">
+		  <div style="width:40px;"> <div class="col"> <img src="img/Dec/Crown.png" style="height:20px;width:20px;display:block;margin: 0 auto;"> </div> </div>
+		  <div style="width:100px;"> <div class="col"> Name </div> </div>
+		  <div style="width:120px;"> <div class="col"> Price </div> </div>
+		  <div style="width:50px;"> <div class="col"> <img src="img/Dec/Cart.png" style="height:20px;width:20px;display:block;margin: 0 auto;"> </div></div> 
+		</div>
+		
+		</ion-item-divider>
+		<!--
+		<div class="row" style="color:gray;">
+		  <div style="width:40px;text-align:center;"> <div class="col"> <b>#1</b> </div> </div>
+		  <div class="col"> <div style="padding-left:2px;width:135px;"> Araya </div> </div>
+		  <div class="col"> <div style="text-align:right;padding-right:15px;"> 369 </div> </div>
+		  <div style="width:45px;"> <div class="col"> <img src="img/Dec/Plus.png" style="height:20px;width:20px;display:block;margin: 0 auto;"> </div> </div> 
+		</div>
+		<div class="row" style="color:gray;">
+		  <div style="width:40px;text-align:center;"> <div class="col"> <b>#2</b> </div> </div>
+		  <div class="col"> <div style="padding-left:2px;width:135px;"> Grand Theft Auto V </div> </div>
+		  <div class="col"> <div style="text-align:right;padding-right:15px;"> 749 </div> </div>
+		  <div style="width:45px;"> <div class="col"> <img src="img/Dec/Plus.png" style="height:20px;width:20px;display:block;margin: 0 auto;"> </div> </div> 
+		</div>
+		<div class="row" style="color:gray;">
+		  <div style="width:40px;text-align:center;"> <div class="col"> <b>#3</b> </div> </div>
+		  <div class="col"> <div style="padding-left:2px;width:135px;"> Tom Clancy's Rai... </div> </div>
+		  <div class="col"> <div style="text-align:right;padding-right:15px;"> 449 </div> </div>
+		  <div style="width:45px;"> <div class="col"> <img src="img/Dec/Plus.png" style="height:20px;width:20px;display:block;margin: 0 auto;"> </div> </div> 
+		</div>
+		-->
+		<ion-item *ngFor="let item of items">
+		  <div class="row"> 
+		 <div class="col" style="width:20px;" >{{item.id}}  </div> 
+		 <div class="col"  style="text-align:left"  >{{ item.name }} </div> 
+		  <div class="col">{{ item.price}}  </div> 
+		  </div> 
+		
+		<button
+         ion-button
+         color="primary"
+         item-right
+         (click)="viewEntry({ record: item })">Add</button>
+		 
+		</ion-item>
+		
+	    </ion-card>
+		
+	
+	
+	
+	<h3 style="padding-left:10px;padding-top:10px;padding-bottom:5px;color:#DAECF3;">Coming Soon</h3>
+	<ion-card>
+		<!-- img src="img/UpComing/FinalFantasy.jpg" -->
+		<ion-slides pager style="padding:0px;margin:0px;background-color:#022D35;">
+		
+			<ion-slide *ngFor="let slide_3 of slides_3" style="padding:0px;">
+			  
+			  <img [src]="slide_3.image"/>
+			  
+			</ion-slide>
+			
+			<ion-slide style="padding:0px;">
+			  
+			  <br/>
+			  <button ion-button large clear icon-right color="primary">
+				See More 
+				<ion-icon name="arrow-round-forward"></ion-icon>
+			  </button>
+			  
+			</ion-slide>
+			
+		</ion-slides>
+		
+		
+		
+	</ion-card>
+	<!-- ion-card>
+	  <img src="img/UpComing/GodOfWar.jpg">
+	</ion-card>
+	<ion-card>
+	  <img src="img/UpComing/Yo_Kai_Watch_2.jpg">
+	</ion-card -->
+	
+	<!-- button [navPush]="MapPg">MAP !!!!</button -->
+
+</ion-content>

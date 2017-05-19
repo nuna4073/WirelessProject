@@ -1,0 +1,51 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Download</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color:#022D41">
+ 
+  <br>
+  
+  	<table align = "center" width = "100%" style="table-layout:fixed;"  >
+	<tr style="text-align:right;color:#DAECF3;">  <td></td>   <td></td>   <td>step3</td></tr>
+	<tr style="height:7px;font-size:7px;"><td bgcolor = "#de531c" > <font color = "#de531c" >step1</font> </td>  
+	<td bgcolor = "#de531c" > <font color = "#de531c" >step2 </font></td>
+	<td bgcolor = "#de531c" > <font color = "#de531c" >step3 </font></td>
+	</table><br>
+
+	<ion-card>
+     <table align ="center" width = "100%" style = "table-layout: fixed; overflow : hidden ; " >
+	<thead style=" text-align : left; font-weight : bold; " > 
+	<tr><td style="width:8%;"> </td><td  style="width:30%;" >Name</td>
+	<td  style="width:27%;">Type</td><td  style="width:15%;">Price</td>
+	</tr>
+	</thead>
+
+	</table> 
+	  <ion-item *ngFor="let item of items">
+      <div class="row"> 
+	  <div class="col"> {{ item.name }} </div> 
+	  <div class="col">{{item.gametype}} </div>
+	  <div class="col"  style=" text-align:right" > {{item.price}} </div>
+	  </div>  
+	</ion-item>
+	
+	</ion-card>
+
+	<table align = "center" style="padding-top:20px;" >
+	<tr><td>
+	<button ion-button color =button2 style="width:100%"(click)="itemTapped()" >Download all</button></td></tr>
+	<tr><td>
+	<button ion-button color =button2 style="width:100%" (click)="itemTappedO()" >Deliverable items</button>
+	</td></tr>
+	<tr><button ion-button color =button2 style="width:100%" (click)="itemTapped()" >Next</button></tr>
+	</table>
+
+</ion-content>

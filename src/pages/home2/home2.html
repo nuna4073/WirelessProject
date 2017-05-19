@@ -1,0 +1,34 @@
+<ion-content >
+
+</ion-content>
+
+<ion-content padding>
+
+   <ion-item>
+      <button
+         class="add"
+         ion-button
+         item-right
+         icon-right
+         margin-bottom
+         color="primary"
+         (click)="addEntry()">
+            Add a technology
+            <ion-icon name="add"></ion-icon>
+      </button>
+   </ion-item>
+
+
+   <ion-item *ngFor="let item of items">
+      <h2>{{ item.name }} </h2>
+      <button
+         ion-button
+         color="primary"
+         item-right
+         (click)="viewEntry({ record: item })">View</button>
+   </ion-item>
+   
+   	<button ion-button color = "button2" (click)="itemTapped()" >Next</button>
+
+
+</ion-content>

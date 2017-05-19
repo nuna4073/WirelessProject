@@ -1,0 +1,77 @@
+<!--
+  Generated template for the Orderdetail page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Order Detail</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-color:#022D41">
+
+  <table align = "center" width = "100%" style="table-layout:fixed;">
+	 <tr>  
+		<td style="color:#DAECF3;"></td>  
+		<td></td>   
+		<td style="color:#DAECF3;">step3</td>  
+	 </tr>
+	 <tr style="height:7px;font-size:7px;" >
+		<td bgcolor = "#de531c"> <font color = "#de531c" >step1</font></td>  
+		<td bgcolor = "#de531c"> <font color = "#de531c">step2</font></td>
+		<td bgcolor = "#de531c"> <font color = "#de531c">step3</font></td>
+	 </tr>
+  </table>
+
+	<h4 style="padding-left:10px;padding-top:10px;padding-bottom:10px;color:#DAECF3;">Deliverable Products</h4>
+	
+	<ion-card style= "padding:5px">
+		<table align ="center" width = "100%" style = "table-layout:fixed;overflow:hidden;font-size:12px;">
+			<thead style=" text-align : left; font-weight : bold;"> 
+				<tr>
+					<td style="width:8%;"> </td>
+					<td style="width:30%;">Name</td>
+					<td style="width:27%;">Type</td><td style="width:15%;">Price</td>
+					<td style="width:20%;">Delete</td>
+				</tr>
+			</thead>
+			 
+		 </table>
+		   <ion-item *ngFor="let item of items">
+      <div class="row"> 
+	  <div class="col"> {{ item.name }} </div> 
+	  <div class="col">{{item.gametype}} </div>
+	  <div class="col"  style=" text-align:right" > {{item.price}} </div>
+	  </div>  
+	</ion-item>
+	 </ion-card> <br>
+ 
+
+	<h4 style="padding-left:10px;padding-top:10px;padding-bottom:10px;color:#DAECF3;" >Fill Your Information  <ion-icon name="locate" (click)="goToMapPage()"></ion-icon></h4>
+	  
+	<ion-card style= "padding:5px">
+	  <table>
+	  <tbody>
+		<tr> <ion-label color="primary">Customer's Name</ion-label><td><ion-input placeholder="Text Input"></ion-input></td></tr>
+		<tr> <ion-label color="primary">Address</ion-label><td><ion-input placeholder="Text Input"></ion-input></td></tr>
+		<tr> <ion-label color="primary">District</ion-label><td><ion-input placeholder="Text Input"></ion-input></td></tr>
+		<tr> <ion-label color="primary">Province</ion-label><td><ion-input placeholder="Text Input"></ion-input></td></tr>
+		<tr> <ion-label color="primary">PostCode</ion-label><td><ion-input type="telno" placeholder="Text Input"></ion-input></td></tr>
+		<tr> <ion-label color="primary">Country</ion-label><td><ion-input type="text" placeholder="Text Input"></ion-input></td></tr>
+		</tbody>
+	  </table>
+	</ion-card>
+	
+	<div align="center" style ="margin-top:30px;">
+		<button ion-button color="button2" (click)="goToThankyouPage()">Next</button>
+	</div> 
+
+</ion-content>

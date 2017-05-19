@@ -1,0 +1,72 @@
+<ion-content >
+
+</ion-content>
+
+<ion-content>
+  
+  <ion-list>
+
+<ion-item>
+  <ion-label>Stock name</ion-label>
+
+<!-- สร้าง Select Controller ชื่อ  stock_name   -->
+  <ion-select [(ngModel)]="stock_name" okText="ตกลง" cancelText="ยกเลิก" multiple="true">
+
+    <!--  กำหนดให้ตัวเลือกของ Select Controller มาจากแถวข้อมูลใน object ชื่อ data_table  -->
+    <ion-option *ngFor="let row of data_table" value="{{row.employee_name}}" > {{row.employee_name}}
+    </ion-option>
+ 
+</ion-select>
+
+
+</ion-item>
+
+<div padding>
+
+   <!-- สร้างปุ่มเพื่อดูข้อมูลที่เลือกใน select controller และกำหนดให้เมื่อกดปุ่มแล้วทำงานที่ 
+          function  get_selected_value   -->
+
+  <button (click)="get_selected_value()"  ion-button block icon-right color="secondary">
+        View Selected Items
+  </button>
+  
+
+</div>
+   
+</ion-list>
+
+<!--
+     < ion-content [(ngModel)] = "table_name" >
+	 <button (click)="show_data()"  ion-button block icon-right color="secondary">
+	 test </button>
+	 < ion-content>
+	 
+	<!--  
+    <table ng-repeat="( employee_id , employee_name , designation, hired_data , salary ) in tbl_employee " > 
+	<tr> <td> {{row.employee_id}} </td>
+	<td> {{ row.employee_name}} </td>
+	<td> {{row.designation}} </td>
+	<td> {{ row.hired_date}} </td>
+	<td> {{row.salary}} </td> </tr>
+	</table>
+	-->
+	
+	<table>
+	<tr *ngFor="let row of data_table" >
+	<td> {{row.employee_name}} </td>
+	<td> {{row.employee_id }} </td> 
+	<td> <button (click)=removeItem(row)>	delete </button> </td> 
+	</tr>
+	</table>
+	
+	 <form  action="index.php"  method="get">
+	 <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
+	 <input type="checkbox" name="vehicle" value="Car" > I have a car<br>
+	 <input type="checkbox" name="vehicle" value="Doc" > I have a dog<br>
+	 <input type="checkbox" name="vehicle" value="Cat" > I have a cat<br>
+	 <input (click)=doSomething() type="submit" value="Submit">
+	 </form>
+	
+	<button ion-button color = "button2" (click)="itemTapped()" >Next</button>
+	
+</ion-content>

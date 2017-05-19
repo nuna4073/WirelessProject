@@ -1,0 +1,77 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Your cart</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-color:#022D41" >
+ 
+	<br>
+	
+	<table align = "center" width = "100%"style="table-layout:fixed;"  >
+	<tr>  <td style="color:#DAECF3;">step1</td>   <td></td>   <td></td>  </tr>
+	
+	<tr style="height:7px;font-size:7px;" ><td bgcolor = "#de531c" > <font color = "#de531c" >step1</font></td>  
+	<td bgcolor = "#f3e2da" > <font color = "#f3e2da">step2</font></td>
+	<td bgcolor = "#f3e2da" > <font color = "#f3e2da">step3</font></td> </tr>
+	</table>
+	
+	<br>
+  
+	 <ion-card style= "padding:5px;" > 
+    <table align ="center" width = "100%" style = "table-layout: fixed; overflow : hidden ; padding = 5px;  " >
+	<thead style=" text-align : left; font-weight : bold;  " > 
+	<tr><td style="width:8%;"> </td><td  style="width:30%;" >Name</td>
+	<td  style="width:27%;">Type</td><td  style="width:15%;">Price</td>
+	<td  style="width:20%;">Delete</td></tr>
+	</thead>
+	
+	
+	<!--
+	
+	<tbody>
+	<tr *ngFor="let row of data_table" >
+	<td> {{ row.id }}</td>
+	<td> {{ row.name }} </td>
+	<td> {{ row.gametype }} </td>
+	<td> {{ row.price }} </td>
+	<td><button ion-button color = "button" style="padding: 2px ; font-size: 8px; ">Delete</button> </td></tr>
+	<!--
+	<tr><td>2</td><td>The sims</td><td>Download</td><td>20</td>
+	<td><button ion-button color = "button" style="padding:2px; font-size: 8px; ">Delete</button> </td></tr>
+	<tr><td>3</td><td>Pokemon</td><td>Sent</td><td>30</td>
+	<td><button ion-button color = "button" style="padding:2px; font-size: 8px; " >Delete</button> </td></tr>
+	
+	</tbody>
+-->
+
+	</table> 
+	
+    </ion-card>
+	
+	<ion-item *ngFor="let item of items">
+    <div class="row"> 
+	<div class="col"> {{ item.name }} </div>
+	<div class="col"> {{item.gametype}} </div>
+	<div class="col" style=" text-align:right" >{{item.price}} </div>
+	</div>
+      <button
+         ion-button
+         color="primary" 
+         item-right
+         (click)="viewEntry({ record: item })">Delete</button>
+   </ion-item>
+	
+
+	<div align = "right" style="padding-top:20px;" >
+	<button ion-button color = "button2" (click)="itemTapped()" >Next</button>
+	</div>
+
+	
+
+</ion-content>
